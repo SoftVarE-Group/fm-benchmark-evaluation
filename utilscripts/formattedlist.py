@@ -33,8 +33,8 @@ pattern   = "*.dimacs"
 for dir,_,_ in os.walk(start_dir):
     files.extend(glob(os.path.join(dir,pattern))) 
 
-file_list = [os.path.relpath(start_dir,file) for file in files]
-fileList = sorted(files)
+file_list = [file.replace(start_dir + '/', '') for file in files]
+fileList = sorted(file_list)
 #fileList = sorted(fileList, key=cmp_to_key(compare))
 
 f = open(outputPath, "w")

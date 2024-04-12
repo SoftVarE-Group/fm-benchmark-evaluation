@@ -3,8 +3,8 @@
 SBVA=./solvers/sat/SBVA/bva
 SOLVER=./solvers/sat/SBVA/cadical
 
-OUTER_TIMEOUT=400
-INNER_TIMEOUT=200
+OUTER_TIMEOUT=60
+INNER_TIMEOUT=30
 
 python3 solvers/sat/SBVA/wrapper.py \
     --input $1 \
