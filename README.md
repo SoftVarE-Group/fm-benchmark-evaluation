@@ -1,8 +1,28 @@
 # Replication package for Evaluating Feature-Model Collection (SPLC'24)
 
+## Recommended usage with Docker
+
+We provide a docker image for our empirical evaluation. To replicate the evaluation follow the steps below.
+1. Get image: `docker pull ghcr.io/sundermannc/fmbenchmarkeval:v1`
+2. Run analyses:
+
+   `docker run --name fmbenchmarksharpsat -d ghcr.io/sundermannc/fmbenchmarkeval:v1 run_configurations/sharpsat.yaml`
+   
+   `docker run --name fmbenchmarksat -d ghcr.io/sundermannc/fmbenchmarkeval:v1 run_configurations/sat.yaml`
+4. Get results:
+
+  `docker cp fmbenchmarksharpsat:benchmark/results/ results-sharpsat`
+  
+  `docker cp fmbenchmarksat:benchmark/results/ results-sat`
+   
+
+
+
+## Without docker
+**Disclaimer:** We recommend using the docker container since setting up all solvers can be tricky, especially on non-Linux systems.
+
 ### Binaries
 We only provide Linux binaries for the different solvers. As the different solvers depend on various Linux-only libraries, we recommend to use a Linux-based system or VM.
-
 
 ### Steps to reproduce
 
