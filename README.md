@@ -3,8 +3,9 @@
 ## Recommended usage with Docker
 
 We provide a docker image for our empirical evaluation. To replicate the evaluation follow the steps below.
-1. Get image: `docker pull ghcr.io/sundermannc/fmbenchmarkeval:v1`
-2. Run analyses:
+1. Login to ghcr. Find instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry), even though the package is public log in seems neccessary.
+2. Get image: `docker pull ghcr.io/sundermannc/fmbenchmarkeval:v1`
+3. Run analyses:
 
    `docker run --name fmbenchmarksharpsat -d ghcr.io/sundermannc/fmbenchmarkeval:v1 run_configurations/sharpsat.yaml`
    
