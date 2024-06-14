@@ -1,5 +1,8 @@
 # Replication package for Evaluating Feature-Model Collection (SPLC'24)
 
+### Binaries
+We only provide Linux binaries for the different solvers. As the different solvers depend on various Linux-only libraries, we recommend to use a Linux-based system or VM.
+
 
 ### Steps to reproduce
 
